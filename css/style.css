@@ -1,0 +1,25 @@
+body {
+    text-align: center;
+    background: gray;
+    margin: 0px;
+}
+.win{
+	border: 0px solid white;
+	background: white;
+	margin:  15px;
+}
+
+.void{
+	display:none;
+}
+.message{
+	margin: 0px;
+
+}
+.close{
+	cursor:pointer;
+	margin: 0px;
+	font-size: 30px;
+	background: green;
+}
+
