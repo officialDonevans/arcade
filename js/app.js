@@ -1,5 +1,3 @@
-
-
 const victory = document.querySelector('.win');
 const close = document.querySelector('.close');
 // Enemies our player must avoid
@@ -15,7 +13,7 @@ var Enemy = function(x, y, speed) {
     this.x = x;
     this.y = y + 62;
     this.speed = speed;
-    this. halt= 101;
+    this.halt= 101;
     this.sprite = 'images/enemy-bug.png';
     this.totalDistance = this.halt*5;
     this.resetPosition =-101;
@@ -32,7 +30,7 @@ Enemy.prototype.update = function(dt) {
         this.x += this.speed * dt;
     }else{
         this.x = this.resetPosition;
-    }
+     }
 };
 
 // Draw the enemy on the screen, required method for game
@@ -62,9 +60,9 @@ class Player{
     }
 
 
-     render(){
-            ctx.drawImage(Resources.get(this.sprite), this.x, this.y);   
-        }
+    render(){
+        ctx.drawImage(Resources.get(this.sprite), this.x, this.y);   
+    }
 
 
     // to handle the input of the player
@@ -91,7 +89,6 @@ class Player{
                     this.y += this.vertical;
                 }
                 break;
-
               
         }
     }
@@ -101,22 +98,20 @@ class Player{
         // when player wins the game
        if (this.y < 0){ 
 
-                victory.classList.remove("void");
-                 this.sprite = false;
-                 this.success = true;
+            victory.classList.remove("void");
+            this.sprite = false;
+            this.sprite = true;
                 
         }
-
 
         //to reset the enemies
 
         for(let enemy of allEnemies){
 
-             if (this.y === enemy.y && (enemy.x + enemy.halt/2 > this.x && enemy.x < this.x + this.horizontal/ 2)){
+            if (this.y === enemy.y && (enemy.x + enemy.halt/2 > this.x && enemy.x < this.x + this.horizontal/ 2)){
                 this.reset();
             }
         }
-
         
     }
 
@@ -144,9 +139,6 @@ const enemy6 = new Enemy(-101, 166, 420);
 const allEnemies = [];
 allEnemies.push(enemy1, enemy2, enemy3, enemy4, enemy5, enemy6);
 
-
-
-
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
 document.addEventListener('keyup', function(e) {
@@ -159,7 +151,6 @@ document.addEventListener('keyup', function(e) {
 
     player.handleInput(allowedKeys[e.keyCode]);
 });
-
 
 close.addEventListener("click", function(){
  window.location.reload(true);   
