@@ -7,7 +7,7 @@
    * move the player to the top, trying to avoid all bugs from touching the player.
    * The player is moved by using the up, down, left, snd right keys on your device. 
    * You have won when you successfully move the player to the top without being touched by a bug.
-   * you can play this game locally by cloning/downloading this game from (https://github.com/officialDonevans/arcade), open index.html in your browser and enjoy the game.
+   * you can play this game locally by cloning/downloading this game from (https://github.com/officialdonevans/arcade), open index.html in your browser and enjoy the game.
    * Or play online from (https://officialdonevans.github.io/arcade/)
     
   ## How i made the arcade game
